@@ -156,7 +156,7 @@ Camera:
   m_Enabled: 1
   serializedVersion: 2
   m_ClearFlags: 2
-  m_BackGroundColor: {r: 0.19215687, g: 0.3019608, b: 0.4745098, a: 0}
+  m_BackGroundColor: {r: 0, g: 0, b: 0, a: 0}
   m_projectionMatrixMode: 1
   m_GateFitMode: 2
   m_FOVAxisMode: 0
@@ -251,11 +251,11 @@ MonoBehaviour:
   m_Script: {fileID: 1980459831, guid: f70555f144d8491a825f0804e09c671c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  m_UiScaleMode: 0
+  m_UiScaleMode: 1
   m_ReferencePixelsPerUnit: 100
   m_ScaleFactor: 1
-  m_ReferenceResolution: {x: 800, y: 600}
-  m_ScreenMatchMode: 0
+  m_ReferenceResolution: {x: 1920, y: 1080}
+  m_ScreenMatchMode: 2
   m_MatchWidthOrHeight: 0
   m_PhysicalUnit: 3
   m_FallbackScreenDPI: 96
@@ -337,10 +337,10 @@ RectTransform:
   m_Father: {fileID: 522308124}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0.5, y: 0.5}
-  m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 658, y: 332}
-  m_SizeDelta: {x: 520.3, y: 208}
+  m_AnchorMin: {x: 1, y: 1}
+  m_AnchorMax: {x: 1, y: 1}
+  m_AnchoredPosition: {x: -302, y: -208}
+  m_SizeDelta: {x: 520.30005, y: 208}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &637329646
 MonoBehaviour:
@@ -663,10 +663,10 @@ RectTransform:
   m_Father: {fileID: 522308124}
   m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0.5, y: 0.5}
-  m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 608, y: 216}
-  m_SizeDelta: {x: 520.3, y: 208}
+  m_AnchorMin: {x: 1, y: 1}
+  m_AnchorMax: {x: 1, y: 1}
+  m_AnchoredPosition: {x: -45, y: -324}
+  m_SizeDelta: {x: 520.30005, y: 208}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1499434619
 MonoBehaviour:
@@ -796,8 +796,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f7428a1fbc8b19f4da8f3ee7c9a9ecde, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  delayInSeconds: 3
-  nextScene: 
+  timeToWait: 4
 --- !u!114 &1636714154
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -810,8 +809,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f7428a1fbc8b19f4da8f3ee7c9a9ecde, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  delayInSeconds: 3
-  nextScene: 
+  timeToWait: 4
 --- !u!4 &1636714155
 Transform:
   m_ObjectHideFlags: 0
