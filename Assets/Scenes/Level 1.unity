@@ -1428,15 +1428,20 @@ PrefabInstance:
       propertyPath: m_Name
       value: Lizard
       objectReference: {fileID: 0}
+    - target: {fileID: 2954233872849650779, guid: f844c3d9f41445844b8d22856c403672,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 2954233872849650782, guid: f844c3d9f41445844b8d22856c403672,
         type: 3}
       propertyPath: m_LocalPosition.x
-      value: 5
+      value: -2.43
       objectReference: {fileID: 0}
     - target: {fileID: 2954233872849650782, guid: f844c3d9f41445844b8d22856c403672,
         type: 3}
       propertyPath: m_LocalPosition.y
-      value: 3
+      value: 5.52
       objectReference: {fileID: 0}
     - target: {fileID: 2954233872849650782, guid: f844c3d9f41445844b8d22856c403672,
         type: 3}

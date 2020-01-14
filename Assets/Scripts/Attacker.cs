@@ -4,15 +4,16 @@ using UnityEngine;
 
 public class Attacker : MonoBehaviour
 {
-    [Range (0f, 5f)][SerializeField] float walkSpeed = 1f;
-    void Start()
-    {
-        
-    }
+    [Range (0f, 5f)][SerializeField] float currentSpeed = 0f;
 
-    // Update is called once per frame
     void Update()
     {
-        transform.Translate(Vector2.left*walkSpeed*Time.deltaTime);
+        transform.Translate(Vector2.left* currentSpeed * Time.deltaTime);
+    }
+
+    public void SetMovementSpeed(float speed) //this is referred to as passing in
+                //This function is being called by the animation event in the unity editor. SPELLING MATTERS!!!!!
+    {
+        currentSpeed = speed;
     }
 }
