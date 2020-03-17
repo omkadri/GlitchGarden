@@ -17,7 +17,15 @@ public class Projectile : MonoBehaviour
 
         // Reduce health
         var health = otherCollider.GetComponent<Health>(); //this line gets the health script attached to the object comm
-        health.DealDamage(damageAmount);
+        var attacker = otherCollider.GetComponent<Attacker>();
+
+        if(attacker && health) // if the object we are colliding with has an attacker and health
+        {
+            health.DealDamage(damageAmount);
+            Destroy(gameObject);
+        }
+
+        
     }
 }
 
