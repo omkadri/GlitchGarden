@@ -16,19 +16,28 @@ public class DefenderSpawner : MonoBehaviour
 
     private Vector2 GetSquareClicked()
     {
-        Vector2 clickPos = new Vector2(Input.mousePosition.x, Input.mousePosition.y);
+        Vector2 rawMousePos = new Vector2(Input.mousePosition.x, Input.mousePosition.y);
         // creates a vector containing the current mouse coordinates
 
-        Vector2 worldPos = Camera.main.ScreenToWorldPoint(clickPos); 
+        Vector2 inGameMousePos = Camera.main.ScreenToWorldPoint(rawMousePos);
         //this gets mouse coordinates relative the withing the game window (as opposed to raw mouse coordinate data)
+
+        Vector2 gridPos = SnapToGrid(inGameMousePos);
+        //snaps spawned enemies to grid
         
-        
-        return worldPos;
+        return gridPos;
     }
 
-    private void SpawnDefender(Vector2 worldPos) //this function cannot run without getting the worldPos vector
+    private Vector2 SnapToGrid(Vector2 rawWorldPos)
     {
-        GameObject newDefender = Instantiate(DefenderType, worldPos, Quaternion.identity) as GameObject;
+        float newX = Mathf.RoundToInt(rawWorldPos.x);
+        float newY = Mathf.RoundToInt(rawWorldPos.y);
+        return new Vector2(newX, newY);
+    }
+
+    private void SpawnDefender(Vector2 inGameMousePos) //this function cannot run without getting the inGameMousePos vector
+    {
+        GameObject newDefender = Instantiate(DefenderType, inGameMousePos, Quaternion.identity) as GameObject;
         //"as gameObject" allows us to see the instance in the unity hierarchy, as well as interact with it
     }
 
