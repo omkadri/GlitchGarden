@@ -70,4 +70,5 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 62ddfc504c09d4444875832df7821e51, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  DefenderType: {fileID: 0}
+  DefenderType: {fileID: 1607668489131843190, guid: e3af27eff019c5c4fbe6ba2fa6c8d039,
+    type: 3}
