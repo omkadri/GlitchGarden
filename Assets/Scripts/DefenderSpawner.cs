@@ -4,14 +4,18 @@ using UnityEngine;
 
 public class DefenderSpawner : MonoBehaviour
 {
-    [SerializeField] GameObject DefenderType;
+    //[SerializeField]  --removed Serialization so designers do not mess it up
+    Defender defender;
 
     private void OnMouseDown()
     {
-        Debug.Log("Mouse was clicked");
-
         SpawnDefender(GetSquareClicked());
         //this passes the mouse vector data to the spawner
+    }
+
+    public void SetSelectedDefender(Defender defenderToSelect)
+    {
+        defender = defenderToSelect;
     }
 
     private Vector2 GetSquareClicked()
@@ -37,7 +41,7 @@ public class DefenderSpawner : MonoBehaviour
 
     private void SpawnDefender(Vector2 inGameMousePos) //this function cannot run without getting the inGameMousePos vector
     {
-        GameObject newDefender = Instantiate(DefenderType, inGameMousePos, Quaternion.identity) as GameObject;
+        Defender newDefender = Instantiate(defender, inGameMousePos, Quaternion.identity) as Defender;
         //"as gameObject" allows us to see the instance in the unity hierarchy, as well as interact with it
     }
 
